@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notification App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="app-container">
+  <h1 class="app-header">Notification App</h1>
+
+  <!-- Button to request notification permission -->
+  <button id="notify-permission-btn" class="btn">Send Notifications</button>
+
+  <!-- Form for entering notification title and body -->
+  <form id="notification-form" class="notification-form" style="display: none;">
+    <div class="form-group">
+      <label for="notification-title">Title:</label>
+      <input type="text" id="notification-title" placeholder="Enter notification title" required>
+    </div>
+
+    <div class="form-group">
+      <label for="notification-body">Body:</label>
+      <input type="text" id="notification-body" placeholder="Enter notification body (optional)">
+    </div>
+
+    <button type="button" id="show-notification-btn" class="btn">Show Notification</button>
+  </form>
+
+  <!-- Message output div -->
+  <div id="message-output"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
