@@ -1,3 +1,26 @@
+
+console.log(window.navigator);
+if ('serviceWorker' in navigator ){
+
+  navigator.serviceWorker.register('/service-worker.js')
+  .then((registration) => {
+    console.log('register sucess', registration)
+  })
+  .catch((error) => {
+    console.log('register failed', error)
+  });
+ 
+}
+else{
+console.log('service workers are not supported');
+
+}
+
+
+
+
+
+
 // JavaScript for handling notification permission and showing notifications
 
 document.addEventListener('DOMContentLoaded', () => {
