@@ -1,39 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Notification App</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+  <head>
+    <!--Link to Web App Manifest -->
+    <link rel="manifest" href="manifest.json" />
+    <link rel="icon" type="image/png" href="/icons/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg" />
+    <link rel="shortcut icon" href="/icons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="MyWebSite" />
+    <link rel="manifest" href="/site.webmanifest" />
 
-<div class="app-container">
-  <h1 class="app-header">Notification App</h1>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notification App</title>
+    <link rel="stylesheet" href="styles.css" />
 
-  <!-- Button to request notification permission -->
-  <button id="notify-permission-btn" class="btn">Send Notifications</button>
+      <!-- Apple meta tags -->
+      <meta name = "apple-mobile-web-app-title" content=" My aApp"> 
+      <meta name="mobile-web-app-capable" content ="yes">
+      <meta name="apple-mobile-web-app-status-bar-style" content="black">
+      <meta name="theme-color" content="black">
+  </head>
+  <body>
+    <div class="app-container">
+      <h1 class="app-header">Notification App</h1>
 
-  <!-- Form for entering notification title and body -->
-  <form id="notification-form" class="notification-form" style="display: none;">
-    <div class="form-group">
-      <label for="notification-title">Title:</label>
-      <input type="text" id="notification-title" placeholder="Enter notification title" required>
+      <!-- Button to request notification permission -->
+      <button id="notify-permission-btn" class="btn">Send Notifications</button>
+
+      <!-- Form for entering notification title and body -->
+      <form
+        id="notification-form"
+        class="notification-form"
+        style="display: none"
+      >
+        <div class="form-group">
+          <label for="notification-title">Title:</label>
+          <input
+            type="text"
+            id="notification-title"
+            placeholder="Enter notification title"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="notification-body">Body:</label>
+          <input
+            type="text"
+            id="notification-body"
+            placeholder="Enter notification body (optional)"
+          />
+        </div>
+
+        <button type="button" id="show-notification-btn" class="btn">
+          Show Notification
+        </button>
+      </form>
+
+      <!-- Message output div -->
+      <div id="message-output"></div>
     </div>
 
-    <div class="form-group">
-      <label for="notification-body">Body:</label>
-      <input type="text" id="notification-body" placeholder="Enter notification body (optional)">
-    </div>
-
-    <button type="button" id="show-notification-btn" class="btn">Show Notification</button>
-  </form>
-
-  <!-- Message output div -->
-  <div id="message-output"></div>
-</div>
-
-<script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
-

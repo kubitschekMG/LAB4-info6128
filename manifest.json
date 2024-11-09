@@ -1,0 +1,29 @@
+{
+"name": "Notification Application",
+"short_name": "My app",
+"description": "This app is part of the evaluation of lab4",
+"start_url":"/",
+"id": "/",
+"display":"standalone",
+"theme_color": "black",
+"background_color": "gray",
+"orientation": "any",
+"icons":[
+    {
+        "src": "/icons/web-app-manifest-192x192.png",
+        "sizes": "192x192",
+        "type": "image/png",
+        "purpose": "any"
+      },
+      {
+        "src": "/icons/web-app-manifest-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "any"
+      }
+
+
+]
+
+
+}
